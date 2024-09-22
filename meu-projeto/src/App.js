@@ -10,7 +10,7 @@ function App() {
     return a+b
   }
 
-  const url = 'https://via.placeholder.com/250'
+  const url = 'https://via.placeholder.com/50'
 
   return (
     <div className="App">
