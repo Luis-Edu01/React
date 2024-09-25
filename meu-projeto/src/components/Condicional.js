@@ -7,7 +7,9 @@ function Condicional(){
     function enviarEmail(e){
         e.preventDefault()
         setUseEmail(email)
-        console.log(useEmail)
+    }
+    function limparEmail(){
+        setUseEmail("")
     }
 
     return (
@@ -16,7 +18,12 @@ function Condicional(){
             <form>
                 <input type="email" placeholder='Digite o seu e-mail' onChange={(e) => setEmail(e.target.value)}/>
                 <button type='submit' onClick={enviarEmail}>Enviar-email</button>
-                {useEmail}
+                {useEmail &&(
+                    <div>
+                        <p>O E-mail do usuário é: {useEmail}</p>
+                        <button onClick={limparEmail} >Limpar E-mail</button>
+                    </div>
+                )}
             </form>
         </>
     )
