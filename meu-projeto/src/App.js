@@ -1,13 +1,24 @@
+import React from 'react'
 import './App.css'
-function App() {
+import Img1 from './components/imgs/img1.jpg'
 
-  const meusItens = ['React', 'Vue', 'Angular']
-
+export default function App() {
+  const nome = () => {
+    return('Luís Edu')
+  }
+  function curso(){
+    return 'Curso de React'
+  }
   return (
-    <div className="App">
-      <h1>Renderização de listas</h1>
-          
-    </div>
+    <section>
+      <reader>
+        <p>{'Nome: ' + nome()}</p>
+        <p>{curso()}</p>
+      </reader>
+      <section>
+      <img src={Img1}/>
+      </section>
+    </section>
   )
 }
-export default App
+
