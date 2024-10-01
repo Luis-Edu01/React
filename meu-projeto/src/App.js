@@ -1,13 +1,17 @@
 import React from 'react'
-import Header from './components/Header'
-import Corpo from './components/Corpo'
+import Dados from './components/Dados'
 
 export default function App() {
 
+  const Cl = 'Luís Edu' 
+  const YT = 'Sem Sentido'
+  const CU ='Dominhoco'
+
   return (
       <>
-        <Corpo/>
-        <Header/>
+        <Dados Canal= {Cl}
+        Youtube= {YT} 
+        Curso={CU} />
       </>
   )
 }
