@@ -1,18 +1,15 @@
-import React from 'react'
-import Relogio from './components/Relogio'
+import React, {useState} from 'react'
+import Numero from './components/Numero'
 import './App.css'
 
 export default function App() {
 
+  const [num,setNum] = useState(10)
+
   return (
     <>
-      <section className='caixa'>
-        <h1>Eu sou mt bom</h1>
-        <h2>Curso de React</h2>
-        <p className='texto'>Eu sou bom demais</p>
-        <a href='https://www.youtube.com' target='_blanck'>Teste Youtube</a>
-        <Relogio/>
-      </section>
+      <p>Valor do State num em App: {num}</p>
+      <Numero num={num} setNum={setNum}/>
     </>
   )
 }
