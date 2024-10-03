@@ -1,16 +1,20 @@
 import React,{useState} from 'react'
-import Img1 from './components/imgs/img1.jpg'
-import Img2 from './components/imgs/img2.jpg'
+import Imgs from './components/Imgs'
 import './App.css'
 
 export default function App() {
 
-  const [ligado,setLigado]=useState(false)
+  const [ligado,setLigado] = useState(false)
+
+  const cancelar=(obj)=>{
+    return obj.preventDefault()
+  }
 
   return (
     <>
-      <img style={{width:'500px'}} src={ligado?Img1:Img2}/>
-      <button onClick={()=>setLigado(!ligado)} >{ligado?'Desligar':'Ligar'}</button>
+      <Imgs ligado={ligado} setLigado={setLigado}/>
+
+      <a href='https://youtube.com' target='_blank' onClick={(e)=>cancelar(e)}>Teste Link cancelado</a>
     </>
   )
 }
