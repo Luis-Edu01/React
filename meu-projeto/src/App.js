@@ -1,15 +1,16 @@
-import React, {useState} from 'react'
-import Numero from './components/Numero'
+import React,{useState} from 'react'
+import Img1 from './components/imgs/img1.jpg'
+import Img2 from './components/imgs/img2.jpg'
 import './App.css'
 
 export default function App() {
 
-  const [num,setNum] = useState(10)
+  const [ligado,setLigado]=useState(false)
 
   return (
     <>
-      <p>Valor do State num em App: {num}</p>
-      <Numero num={num} setNum={setNum}/>
+      <img style={{width:'500px'}} src={ligado?Img1:Img2}/>
+      <button onClick={()=>setLigado(!ligado)} >{ligado?'Desligar':'Ligar'}</button>
     </>
   )
 }
